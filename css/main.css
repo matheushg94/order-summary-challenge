@@ -60,13 +60,6 @@ body {
     background-size: cover;
 }
 
-@media only screen and (min-width: 920px) {
-    body {
-        background: var(--color1) url(../images/pattern-background-desktop.svg) no-repeat center;
-        background-size: cover;
-    }
-}
-
 main {
     display: grid;
     place-content: center;
@@ -85,6 +78,7 @@ main {
 
 .content {
     padding: 20px;
+    padding: 1.25rem;
     text-align: center;
 }
 
@@ -94,11 +88,13 @@ main {
     font-weight: var(--fw-bolder);
     color: var(--color5);
     margin: 10px;
+    margin: 0.625rem;
 }
 
 .description {
     color: var(--color4);
     margin: 20px;
+    margin: 1.25rem;
 }
 
 .product {
@@ -107,12 +103,15 @@ main {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 100%;
-    height: 70px;
+    height: 4.375rem;
+    height: 80px;
     background-color: var(--color3);
     color: var(--color4);
     border-radius: 10px;
     padding: 10px;
+    padding: 0.625rem;
     margin: 10px 0px;
+    margin: 0.625rem 0rem;
 }
 
 .icon {
@@ -125,11 +124,15 @@ main {
     grid-row-end: 2;
     color: var(--color5);
     font-weight: var(--fw-bolder);
+    place-self: start;
+    margin-left: 5px;
 }
 
 .price {
     grid-row-start: 2;
     grid-row-end: 3;
+    place-self: start;
+    margin-left: 5px;
 }
 
 .change {
@@ -147,10 +150,12 @@ main {
 .button {
     width: 100%;
     height: 50px;
+    height: 3.125rem;
     background-color: var(--color2);
     border: 0;
     border-radius: 10px;
     margin: 10px 0px;
+    margin: 0.625rem 0rem;
     box-shadow: 0px 15px 15px var(--color2-s);
 }
 
@@ -171,6 +176,7 @@ main {
     text-decoration: none;
     color: var(--color4);
     margin: 10px;
+    margin: 0.625rem;
 }
 
 .cancel:hover {
@@ -192,4 +198,19 @@ main {
 
 .footer a:hover {
     color: var(--color2);
+}
+
+@media only screen and (min-width: 920px) {
+    body {
+        background: var(--color1) url(../images/pattern-background-desktop.svg) no-repeat top;
+        background-size: contain;
+    }
+
+    .card {
+        width: 450px;
+    }
+
+    .content {
+        padding: 30px 40px;
+    }
 }

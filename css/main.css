@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+:root {
+    --color1: hsl(225, 100%, 94%);
+    --color2: hsl(245, 75%, 52%);
+    --color2-s: hsla(245, 75%, 52%, 0.2);
+    --color3: hsl(225, 100%, 98%);
+    --color4: hsl(224, 23%, 55%);
+    --color5: hsl(223, 47%, 23%);
+
+    --ff-base: 'Red Hat Display', sans-serif;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+    --fw-bolder: 900;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* Accessible line-height
+   Improve text rendering */
+   body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+/* General styling */
+
+body {
+    font-family: var(--ff-base);
+    background: var(--color1) url(../images/pattern-background-mobile.svg) no-repeat center;
+    background-size: cover;
+}
+
+@media only screen and (min-width: 920px) {
+    body {
+        background: var(--color1) url(../images/pattern-background-desktop.svg) no-repeat center;
+        background-size: cover;
+    }
+}
+
+main {
+    display: grid;
+    place-content: center;
+    height: calc(100vh - 21.15px);
+    height: calc(100vh - 1.322rem);
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.card {
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: var(--fw-bolder);
+    color: var(--color5);
+    margin: 10px;
+}
+
+.description {
+    color: var(--color4);
+    margin: 20px;
+}
+
+.product {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 70px;
+    background-color: var(--color3);
+    color: var(--color4);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.icon {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.plan {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: var(--color5);
+    font-weight: var(--fw-bolder);
+}
+
+.price {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.change {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    color: var(--color2);
+    font-weight: var(--fw-bold);
+}
+
+.change:hover {
+    color: var(--color4);
+    text-decoration: none;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color2);
+    border: 0;
+    border-radius: 10px;
+    margin: 10px 0px;
+    box-shadow: 0px 15px 15px var(--color2-s);
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+
+.button:hover {
+    background-color: var(--color4);
+    cursor: pointer;
+}
+
+.cancel {
+    display: block;
+    font-weight: var(--fw-bolder);
+    text-decoration: none;
+    color: var(--color4);
+    margin: 10px;
+}
+
+.cancel:hover {
+    color: var(--color5);
+}
+
+.footer {
+    font-size: 12px;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 6px;
+    padding: 0.375px;
+}
+
+.footer a {
+    color: var(--color5);
+    font-weight: var(--fw-bold);
+}
+
+.footer a:hover {
+    color: var(--color2);
+}
